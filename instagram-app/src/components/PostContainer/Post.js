@@ -35,7 +35,7 @@ class Post extends React.Component{
           <img className="user_interaction" alt="comment" src="./../img/message.png" />
         </div>
         <div className="interaction_container">
-          <p>{this.state.likes} likes </p>
+          <p><strong>{this.state.likes}</strong> likes </p>
         </div>
         <Comments comments = {user.comments} time={user.timestamp}/>
       </div>
