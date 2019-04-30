@@ -23,7 +23,7 @@ class Login extends React.Component{
   render(){
     return(
       <div className="login-container">
-        <h1 className="login-title"> Instagram </h1>
+        <h1 className="login-title"> <img src="img/insta.png" class ="loginlogo"></img> Instagram </h1>
         <form>
           <div className="login-label">
             <label> Username: </label><br />
