@@ -35,7 +35,7 @@ class Comments extends React.Component{
         <Comment
          key={index}
          comment={comment} />
-      ))}
+      ))}                       
         <p className="time">{newTime}</p>
         <div className="comment_input_container">
           <form onSubmit={this.addNewComment}>

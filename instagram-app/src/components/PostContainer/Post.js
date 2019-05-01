@@ -12,10 +12,17 @@ class Post extends React.Component{
   }
 
   addLike = () => {
-    this.setState({
-      likes: this.state.likes + 1
-    })
-  }
+   if(!this.state.liked){
+       this.setState({
+           likes: this.state.likes + 1, 
+           liked: !this.state.liked
+       })} else if (this.state.liked) {
+           this.setState({ 
+               likes: this.state.likes - 1,
+               liked: !this.state.liked
+            })
+       }
+   }
 
   render(){
     const user = this.props.data;

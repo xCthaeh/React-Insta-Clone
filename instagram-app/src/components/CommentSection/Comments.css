@@ -9,14 +9,14 @@
   font-size: 1rem;
 }
 
-.comment_container p{
+/* .comment_container p{
   font-size: 1rem;
-}
+} */
 
-.comment_container p span{
+/* .comment_container p span{
   font-weight: bold;
   padding-left: 10px;
-}
+} */
 
 .comment_input_container{
   display: flex;
