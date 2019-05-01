@@ -3,7 +3,7 @@
   height: 600px;
   padding-top: 120px;
   text-align: center;
-  margin: auto;
+  margin: 80px auto;
   border: 2px solid black;
   border-radius: 5px;
   background-color: white;
@@ -20,10 +20,13 @@
 }
 
 .login-submit {
+  height: 30px;
+  width: 60px;
   font-size: 1rem;
-  border: 1px solid black;
   border-radius: 5px;
-  margin-top: 10px;
+  margin-top: 30px;
+  font-family: 'Cabin', sans-serif;
+
 }
 
 .loginlogo {
