@@ -2,6 +2,7 @@
 /**@jsx jsx */
 import React from "react";
 import { jsx, css } from "@emotion/core";
+import img from './search.png';
 
 const search_component_container = css`
   display: flex;
@@ -39,7 +40,7 @@ const search_input = css`
   width: 250px;
   padding: 10px;
   background-color: #fafafa;
-  background-image: url("./search.png");
+  background-image: url(${img});
   background-position: 7px center;
   background-repeat: no-repeat;
 `;
