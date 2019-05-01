@@ -2,7 +2,6 @@
 /**@jsx jsx */
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Comments.css';
 import { jsx, css } from "@emotion/core";
 
 const commentp = css`
