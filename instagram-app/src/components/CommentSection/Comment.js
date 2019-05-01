@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-/**@jscx jsx */
+/**@jsx jsx */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Comments.css';
@@ -7,12 +7,12 @@ import { jsx, css } from "@emotion/core";
 
 const commentp = css`
 font-size: 1rem;
-`;
+`
 
 const commentspan = css`
 font-weight: bold;
 padding-left: 10px;
-`;
+`
 
 const Comment = props => {
   return (
