@@ -5,11 +5,13 @@ import Post from './Post';
 import { jsx, css } from "@emotion/core";
 
 const post_container = css `
-  margin-top: 50px;
+  margin-top: 35px;
+  margin-bottom:30px;
   width: 640px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
+  
 `
 
 const PostContainer = props => {

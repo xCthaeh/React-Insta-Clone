@@ -7,12 +7,13 @@ import { jsx, css } from "@emotion/core";
 
 const user_post = css`
   border: 1px solid #d3d3d3;
+  margin-bottom: 20px;
 `;
 const userInfo = css`
   display: flex;
   align-items: center;
   padding: 10px 15px 0px;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 `;
 const user_icon = css`
   border-radius: 50%;
