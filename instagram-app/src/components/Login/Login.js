@@ -46,7 +46,7 @@ class Login extends React.Component{
             onChange={this.handleInputChange} /><br />
           <button
             className="login-submit"
-            type="subimt"
+            type="submit"
             onClick={this.handleLoginSubmit}> Login </button>
         </form>
       </div>
