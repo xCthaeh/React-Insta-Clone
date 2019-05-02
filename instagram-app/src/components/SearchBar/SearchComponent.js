@@ -2,7 +2,7 @@
 /**@jsx jsx */
 import React from "react";
 import { jsx, css } from "@emotion/core";
-import img from './search.png';
+import img from "./search.png";
 
 const search_component_container = css`
   display: flex;
@@ -49,7 +49,18 @@ const icons = css`
   width: 34px;
   margin-right: 20px;
 `;
-
+/////////
+const onLogOut = css`
+  margin-top: 17px;
+  width: 35px;
+  height: 35px;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  font-size: 10px;
+`;
+/////////
 class SearchComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -87,9 +98,19 @@ class SearchComponent extends React.Component {
           <img css={icons} alt="likes" src="./../img/heart.png" />
           <img css={icons} alt="profile" src="./../img/profile.png" />
         </div>
+
+        <div>
+          <LogOut onClick={onLogOut}>Log Out</LogOut>
+        </div>
+        
       </div>
     );
   }
 }
-
+///////////////
+const LogOut = () => {
+  localStorage.removeItem("user");
+  window.location.reload();
+};
+//////////
 export default SearchComponent;
