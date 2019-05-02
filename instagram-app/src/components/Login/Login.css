@@ -17,16 +17,24 @@
 
 .login-input {
   width: 200px;
+  border-color: purple;
 }
 
 .login-submit {
   height: 30px;
   width: 60px;
   font-size: 1rem;
-  border-radius: 5px;
+  border-radius: 20px;
+  border-color:purple;
+  background-color: rgb(176, 176, 245);
   margin-top: 30px;
   font-family: 'Cabin', sans-serif;
 
+}
+
+.login-submit:hover {
+  background-color: rgb(88, 9, 88);
+  color:white;
 }
 
 .loginlogo {
