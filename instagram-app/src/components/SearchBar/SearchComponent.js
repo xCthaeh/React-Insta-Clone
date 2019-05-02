@@ -54,7 +54,7 @@ class SearchComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchInput: "",
+      searchInput: ""
     };
   }
 
@@ -85,7 +85,24 @@ class SearchComponent extends React.Component {
         <div className="search-component-navigation">
           <img css={icons} alt="browse" src="./../img/compass.png" />
           <img css={icons} alt="likes" src="./../img/heart.png" />
-          <img css={icons} alt="profile" src="./../img/profile.png" />
+          <img
+            css={icons}
+            onClick={() => {
+              localStorage.removeItem("user");
+              window.location.reload();
+            }}
+            alt="profile"
+            src="./../img/profile.png"
+          />
+          <img
+            css={icons}
+            onClick={() => {
+              localStorage.removeItem("user");
+              window.location.reload();
+            }}
+            alt="logout"
+            src="./../img/logout.png"
+          />
         </div>
       </div>
     );
