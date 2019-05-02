@@ -4,6 +4,7 @@ import React from "react";
 import Comment from "./Comment";
 import moment from "moment";
 import { jsx, css } from "@emotion/core";
+import PropTypes from "prop-types";
 
 const comments_container = css`
   width: 640px;
@@ -48,19 +49,45 @@ class Comments extends React.Component {
       comment: ""
     };
   }
+  ///////
+  componentDidMount() {
+    const id = this.props.postId;
+    if (localStorage.getItem(id)) {
+      this.setState({
+        comments: JSON.parse(localStorage.getItem(this.props.postId))
+      });
+    } else {
+      this.setComments();
+    }
+  }
 
+  componentWillUnmount() {
+    this.setComments();
+  }
+
+  setComments = () => {
+    localStorage.setItem(
+      this.props.postId,
+      JSON.stringify(this.state.comments)
+    );
+  };
+  
   commentHandleChange = e => {
     this.setState({ comment: e.target.value });
   };
 
   addNewComment = e => {
     e.preventDefault();
+    const newComment = {
+      text: this.state.comment,
+      username: localStorage.getItem("user")
+    };
     const comments = this.state.comments.slice();
-    const newComment = { text: this.state.comment, username: "xCthaeh" };
-    if (this.state.comment !== "") {
-      comments.push(newComment);
-      this.setState({ comments, comment: "" });
-    }
+    comments.push(newComment);
+    this.setState({ comments, comment: "" });
+    setTimeout(() => {
+      this.setComments();
+    }, 500);
   };
 
   render() {
@@ -88,5 +115,11 @@ class Comments extends React.Component {
     );
   }
 }
+
+Comments.propTypes = {
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
+  )
+};
 
 export default Comments;
