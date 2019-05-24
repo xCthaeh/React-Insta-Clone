@@ -1,0 +1,70 @@
+import React from "react";
+import "./Login.css";
+
+class Login extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password: ""
+    };
+  }
+
+  handleInputChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleLoginSubmit = e => {
+    const user = this.state.username;
+    localStorage.setItem("user", user);
+    window.location.reload();
+  };
+
+  render() {
+    return (
+      <div className="login-container">
+        <div>
+          {" "}
+          <img src="img/insta.png" alt="" className="loginlogo" />
+        </div>
+        <img alt="instagram logo" class="signinlogo" src="./../img/instagram.png" />
+        <form>
+          <div className="login-label">
+            <label> Username: </label>
+            <br />
+          </div>
+          <input
+            className="login-input"
+            type="text"
+            name="username"
+            value={this.state.username}
+            onChange={this.handleInputChange}
+          />
+          <br />
+          <div className="login-label">
+            <label> Password: </label>
+            <br />
+          </div>
+          <input
+            className="login-input"
+            type="text"
+            name="password"
+            value={this.state.password}
+            onChange={this.handleInputChange}
+          />
+          <br />
+          <button
+            className="login-submit"
+            type="submit"
+            onClick={this.handleLoginSubmit}
+          >
+            {" "}
+            Login{" "}
+          </button>
+        </form>
+      </div>
+    );
+  }
+}
+
+export default Login;
